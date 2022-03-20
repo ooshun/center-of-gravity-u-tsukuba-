@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css" type="text/css" media="screen">
+    <title>The Center of Gravity of University of Tsukuba</title>
+</head>
+<body>
+    <div class="main">
+        <h1>重心を求めるやつ</h1>
+        <div id = "app">
+            <div class="col-1">
+                <label>第一エリア(1A):</label><input type="number" min="0" step="1" v-model.number="input_1" style="width: 30px;"> 人
+            </div>
+            <div class="col-2">
+                <label>第二エリア(2A):</label><input type="number" min="0" step="1" v-model.number="input_2" style="width: 30px;"> 人
+            </div>
+            <div class="col-3">
+                <label>第三エリア(3A):</label><input type="number" min="0" step="1" v-model.number="input_3" style="width: 30px;"> 人
+            </div>
+            <div class="col-4">
+                <label>医学エリア(4A):</label><input type="number" min="0" step="1" v-model.number="input_4" style="width: 30px;"> 人
+            </div>
+            <div class="col-5">
+                <label>体芸エリア(5C):</label><input type="number" min="0" step="1" v-model.number="input_5" style="width: 30px;"> 人
+            </div>
+            <div class="col-7">
+                <label>春日エリア(7A):</label><input type="number" min="0" step="1" v-model.number="input_7" style="width: 30px;"> 人
+            </div>
+
+            合計：<span>{{ sum_all }}</span>人
+            <br>
+            <span>{{ mapX }}</span>, 
+            <span>{{ mapY }}</span> 
+
+            <br>
+
+            <!-- {{ position }} -->
+            <br>
+            <a :href="'https://www.google.co.jp/maps/place/' + mapX + ',' + mapY">Goole Mapsで確認する</a>
+
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
